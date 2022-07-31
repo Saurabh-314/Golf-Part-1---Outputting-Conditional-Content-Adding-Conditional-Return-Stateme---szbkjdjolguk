@@ -14,8 +14,7 @@ class App extends Component {
     };
 
     buttonClickHandler() {
-        console.log("button clicked");
-        this.setState({renderBall : true});
+    this.setState({renderBall : true});
    }
     renderBallOrButton() {
 		if (this.state.renderBall) {
@@ -29,10 +28,10 @@ class App extends Component {
     componentDidMount() {
         document.addEventListener('keydown',(e)=>{
             let newPosi = this.state.posi + 5;
-            if(e.key === 'ArrowRight'){
+            if(e.key === "ArrowRight"){
                 this.setState({
                     posi : newPosi,
-                    ballPosition: { left: `${this.state.posi}px` }
+                    ballPosition: { left: `${newPosi}px` }
                 })
             }
         })
